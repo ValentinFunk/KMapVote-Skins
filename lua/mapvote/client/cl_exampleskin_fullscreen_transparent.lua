@@ -4,8 +4,7 @@ SKIN.Name = "KMapVoteTransparentFS"
 local function loadSkin( )
 
 
-SKIN.BGColorFrom = Color( 19, 37, 55 )
-SKIN.BGColorTo = Color( 21, 54, 55 )
+SKIN.BGColor = Color( 0, 0, 0, 200 )
 SKIN.PanelBG = Color( 0, 108, 128 )
 SKIN.TextColor = Color( 235, 202, 184 )
 SKIN.ButtonColor = Color( 87, 118, 145 )
@@ -100,9 +99,9 @@ function SKIN:LayoutMapVoteFrame( panel )
 	end
 end
 
-local id = os.time( ) .. "MapVoteGradient" 
 function SKIN:PaintMapVoteFrame( panel, w, h )
-	GradientBox( id, 0, 0, w, h, self.BGColorFrom, self.BGColorTo, GRADIENT_VERTICAL, false )
+	surface.SetDrawColor( SKIN.BGColor )
+	surface.DrawRect( 0, 0, w, h )
 end
 
 function SKIN:PaintAvatarContainer( panel, w, h )
