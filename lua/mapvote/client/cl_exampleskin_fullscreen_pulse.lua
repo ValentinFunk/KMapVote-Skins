@@ -42,7 +42,7 @@ end
 --hook below will be called first. Dont c&p code, only 
 --do things that need to differ here.
 function SKIN:LayoutGMVoteFrame( panel )
-
+	panel:SetSize( ScrW( ), ScrH( ) )
 end
 
 function SKIN:LayoutMapVoteFrame( panel )
