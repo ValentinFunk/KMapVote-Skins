@@ -99,7 +99,6 @@ function SKIN:LayoutMapVoteFrame( panel )
 	end
 end
 
-local id = os.time( ) .. "MapVoteGradient" 
 function SKIN:PaintMapVoteFrame( panel, w, h )
 	surface.SetDrawColor( self.BGColor )
 	surface.DrawRect( 0, 0, w, h )
