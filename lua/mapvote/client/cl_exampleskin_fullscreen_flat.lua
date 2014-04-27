@@ -101,7 +101,7 @@ local id = os.time( ) .. "MapVoteGradient123"
 function SKIN:PaintMapVoteFrame( panel, w, h )
 	surface.SetDrawColor( 0, 0, 0, 150 )
 	surface.DrawRect( 0, 0, w, h )
-	panel.stared = panel.started or CurTime( )
+	panel.started = panel.started or CurTime( )
 	Derma_DrawBackgroundBlur( panel, panel.started )
 	--draw.GradientBox( id, 0, 0, w, h, SKIN.BGColorTo, self.BGColorTo, GRADIENT_VERTICAL, false, Color( 1, 1, 0.7 ), Color( 1, 1, 1 ) )
 end

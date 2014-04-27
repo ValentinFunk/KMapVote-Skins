@@ -56,8 +56,11 @@ end
 
 function SKIN:LayoutMapVoteFrame( panel )
 	panel:Center( )
+	panel.targetHeight = 800
 	function panel:PerformLayout( )
 		local y = 0
+		self:SetTall( 10000 )
+		self.mapPanels:InvalidateLayout( true )
 		for k, v in pairs( self:GetChildren( ) ) do
 			local x, _y = v:GetPos( )
 			_y = _y + v:GetTall( )
