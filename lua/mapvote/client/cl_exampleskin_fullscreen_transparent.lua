@@ -59,6 +59,7 @@ end
 
 function SKIN:LayoutMapVoteFrame( panel )
 	panel:SetSize( ScrW( ), ScrH( ) )
+	panel.targetHeight = ScrH( )
 	
 	if MAPVOTE.AllowClose then
 		local closeButton = vgui.Create('DButton', panel)

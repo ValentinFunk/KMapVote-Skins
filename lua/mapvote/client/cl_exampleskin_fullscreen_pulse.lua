@@ -47,6 +47,7 @@ end
 
 function SKIN:LayoutMapVoteFrame( panel )
 	panel:SetSize( ScrW( ), ScrH( ) )
+	panel.targetHeight = ScrH( )
 	
 	if MAPVOTE.AllowClose then
 		local closeButton = vgui.Create('DButton', panel)
@@ -89,7 +90,7 @@ end
 
 local id = os.time( ) .. "MapVoteGradienyvxcyt" 
 function SKIN:PaintMapVoteFrame( panel, w, h )
-	draw.GradientBox( id, 0, 0, w, h, self.BGColorFrom,  self.BGColorTo, GRADIENT_VERTICAL, true, Color( 0.6, 0.6, 0.6 ), Color( 0.9, 0.9, 0.9 ) )
+	draw.GradientBox( id, 0, 0, ScrW(), ScrH(), self.BGColorFrom,  self.BGColorTo, GRADIENT_VERTICAL, true, Color( 0.6, 0.6, 0.6 ), Color( 0.9, 0.9, 0.9 ) )
 end
 
 function SKIN:PaintAvatarContainer( panel, w, h )
